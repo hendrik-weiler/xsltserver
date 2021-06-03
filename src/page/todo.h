@@ -6,10 +6,14 @@
 
 #include <iostream>
 #include <civetweb.h>
+#include <fstream>
+#include <streambuf>
+
 #include "../app/Routing.h"
 #include "../app/Data.h"
 #include "../app/Tools.h"
 #include "../app/Cookie.h"
+#include "../app/Base64.h"
 
 namespace page_todo {
 

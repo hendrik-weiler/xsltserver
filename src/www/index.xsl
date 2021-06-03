@@ -13,9 +13,14 @@
                 <xsl:with-param name="css" select="'index.css'"/>
             </xsl:call-template>
             <body>
-                <h1>List of examples</h1>
-                <a href="/login.xslhtml">Login App</a><br/>
-                <a href="/todo.xslhtml">Todo App</a><br/>
+                <div class="container">
+                    <h1>
+                        <img src="img/apps.svg" />
+                        <span>List of examples</span>
+                    </h1>
+                    <a href="/login.xslhtml">Login App</a><br/>
+                    <a href="/todo.xslhtml">Todo App</a><br/>
+                </div>
             </body>
         </html>
     </xsl:template>

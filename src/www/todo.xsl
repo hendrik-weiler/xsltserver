@@ -14,7 +14,10 @@
             </xsl:call-template>
             <body>
                 <div class="container">
-                    <h1>Basic To-Do App</h1>
+                    <h1>
+                        <img src="data:image/svg+xml;base64,{/Data/TodoImage}"/>
+                        <span>Basic To-Do App</span>
+                    </h1>
                     <table>
                         <tr>
                             <th align="left">To-Do's</th>

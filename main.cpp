@@ -188,6 +188,9 @@ int main() {
             NULL
     };
 
+    cout << "Start server at http://localhost:8000/" << endl;
+    cout << "Type 'exit' and press enter to stop the server" << endl;
+
     /* Start the server */
     ctx = mg_start(&callbacks, 0, options);
 

@@ -6,7 +6,20 @@
 
 void page_todo::todo(mg_connection *conn, Data &data, Request &request) {
 
+    using macaron::Base64;
+
     const struct mg_request_info *ri = mg_get_request_info(conn);
+
+    // load file into xml output
+    std::ifstream t("www/img/todo.svg");
+    if(t.good()) {
+        std::string str((std::istreambuf_iterator<char>(t)),
+                        std::istreambuf_iterator<char>());
+        data.Set("TodoImage", Base64::Encode(str), true);
+    } else {
+        cout << "Could not find todo.svg" << endl;
+    }
+    //
 
     string entriesLenGlobal = Cookie::Get(conn, "len", 10);
 
@@ -80,7 +93,6 @@ void page_todo::todo(mg_connection *conn, Data &data, Request &request) {
         entries.push_back(d);
     }
     data.SetList("Entry", entries);
-
 }
 
 void page_todo::register_route() {
