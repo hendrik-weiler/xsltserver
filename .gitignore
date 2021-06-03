@@ -1,0 +1,4 @@
+.idea/
+venv
+cmake-build-debug
+.DS_Store

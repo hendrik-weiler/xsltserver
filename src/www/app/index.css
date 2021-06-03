@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background: #efefef;
+}
+
+.left ul {
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.left a.active,
+.left a:hover {
+    background: #cecece;
+}
+
+.left form {
+    padding: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    flex-flow: column;
+    padding: 20px;
+}
+
+.content .outer-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table tr th,
+table tr td {
+    padding: 10px;
+}
+
+table tr th {
+    border-bottom: 1px solid #cecece;
+    text-align: left;
+}

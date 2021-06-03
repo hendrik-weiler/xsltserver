@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.error {
+    border:1px solid #dc3545;
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input:focus,
+input:hover {
+    outline: none;
+}
+
+.button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background: #0069d9;
+}

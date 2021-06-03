@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    width: 100%;
+    background: #efefef;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 15px;
+    background: white;
+    width: 100%;
+    max-width: 400px;
+}
+
+form p {
+    font-weight: bold;
+    text-align: center;
+}
