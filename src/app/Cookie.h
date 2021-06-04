@@ -8,9 +8,11 @@
 #include <civetweb.h>
 #include <ctime>
 #include <vector>
+#include <cstring>
 
 using std::string;
 using std::vector;
+using std::strlen;
 
 typedef vector<string> CookieList;
 

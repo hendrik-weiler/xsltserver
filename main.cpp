@@ -1,9 +1,9 @@
 #include <iostream>
 #include <civetweb.h>
-#include <libc.h>
 #include <string>
 #include <fstream>
 #include <streambuf>
+#include <unistd.h>
 
 #include "src/app/XSLTransformer.h"
 #include "src/app/Tools.h"
@@ -204,7 +204,7 @@ int main() {
     registerAllRoutes();
 
     while(true) {
-        sleep(1);
+        usleep(1000);
         std::string str;
         std::getline(std::cin, str);
         if(str == "exit") {

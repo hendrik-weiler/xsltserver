@@ -9,6 +9,7 @@
 #include <string>
 #include "Data.h"
 #include "Request.h"
+#include <functional>
 
 using std::unordered_map;
 using std::string;

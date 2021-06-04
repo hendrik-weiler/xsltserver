@@ -28,7 +28,7 @@ void Cookie::Set(mg_connection * conn, string key, string value) {
 
 void Cookie::WriteOut(mg_connection * conn) {
     mg_response_header_start(conn, 200);
-    char * ct = "text/html";
+    char * ct = (char *)"text/html";
     mg_response_header_add(conn, "Content-Type", ct, strlen(ct));
     for(auto cookie : Cookies) {
         mg_response_header_add(conn, "Set-Cookie", cookie.c_str(), cookie.size());
