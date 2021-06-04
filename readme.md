@@ -17,7 +17,7 @@ Following libraries will be used
 ### Install
 
 This application uses conan to install its dependencies.
-Create the directory ```cmake-build-debug``` change to the build folder ```cd cmake-build-debug``` and run ```cmake .```. Afterwards run ```conan install ..```.
+Create the directory ```cmake-build-debug``` change to the build folder ```cd cmake-build-debug``` and run ```conan install ..```.
 
 ### Build
 Run the ```build.sh``` in the root folder. The executable will be created in ```cmake-build-debug/bin```
