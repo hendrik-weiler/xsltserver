@@ -3,7 +3,15 @@
 #include <string>
 #include <fstream>
 #include <streambuf>
+#ifdef _WIN64
+#include <windows.h>
+#endif
+#ifdef __linux__
 #include <unistd.h>
+#endif
+#ifdef __APPLE__
+#include <unistd.h>
+#endif
 
 #include "src/app/XSLTransformer.h"
 #include "src/app/Tools.h"
@@ -204,7 +212,15 @@ int main() {
     registerAllRoutes();
 
     while(true) {
+        #ifdef _WIN64
+        Sleep(1000);
+        #endif
+        #ifdef linux
         usleep(1000);
+        #endif
+        #ifdef __APPLE__
+        usleep(1000);
+        #endif
         std::string str;
         std::getline(std::cin, str);
         if(str == "exit") {

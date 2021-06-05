@@ -51,7 +51,7 @@ void Cookie::Delete(mg_connection *conn, string key) {
 
 string Cookie::Get(mg_connection * conn, string key, int lengthOfValue) {
     const char *cookie = mg_get_header(conn, "Cookie");
-    char value[lengthOfValue];
+    char * value = (char *)calloc(lengthOfValue, sizeof(char));
 
     mg_get_cookie(cookie, key.c_str(), value, sizeof(value));
     return string{value};

@@ -9,7 +9,7 @@ QueryParamsMap Request::GetParams() {
 }
 
 string Request::GetPostVar(string key) {
-    char input[PostDataLen];
+    char * input = (char *)calloc(PostDataLen, sizeof(char));
 
     mg_get_var(PostData, PostDataLen, key.c_str(), input, sizeof(input));
     return string{input};

@@ -19,8 +19,15 @@ Following libraries will be used
 This application uses conan to install its dependencies.
 Create the directory ```cmake-build-debug``` change to the build folder ```cd cmake-build-debug``` and run ```conan install ..```.
 
+###### Windows
+Create the directory ```cmake-build-debug``` change to the build folder ```cd cmake-build-debug``` and run
+```conan install .. -s compiler='Visual Studio' -s compiler.version=16```
+
 ### Build
 Run the ```build.sh``` in the root folder. The executable will be created in ```cmake-build-debug/bin```
+
+###### Windows
+Run the ```build.bat``` in the root folder. The executable will be created in ```cmake-build-debug/bin```
 
 ### Development
 
@@ -49,6 +56,7 @@ With the data parameter you can set single key,value pairs or lists.
 **Single key,value pair**
 ```
 data.Set("Email","max.mustermann@company.com");
+data.Set("Email","max.mustermann@company.com", true); // value as <![CDATA[max.mustermann@company.com]]>
 // in xsl <xsl:value-of select="/Data/Email"></xsl:value-of>
 ```
 
